@@ -13,14 +13,6 @@ on:
 jobs:
   sim:
     runs-on: ubuntu-22.04
-    strategy:
-      matrix:
-        test_cmd:
-          - ../tut3_verilog
-          - ../lab1_imul
-          - ../lab2_proc
-          - ../lab3_mem
-          - ../lab4_sys
 
     steps:
       - uses: actions/checkout@v4
@@ -52,5 +44,7 @@ jobs:
         run: |
           cd src
           verilator -Wall --lint-only PairTripleDetector.v
+
 #          iverilog -Wall -g2012 -o PairTripleDetector_test PairTripleDetector_test.v
 #          ./PairTripleDetector_test
+
