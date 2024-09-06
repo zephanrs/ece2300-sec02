@@ -35,16 +35,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          sudo apt-get install -y graphviz
-          pip install --upgrade pip
-          pip install git+https://github.com/cornell-brg/pymtl3@pymtl4.0-dev
+          sudo apt-get install -y iverilog
 
       - name: Run sim tests
         timeout-minutes: 10
         run: |
           cd src
           verilator -Wall --lint-only PairTripleDetector.v
-
-#          iverilog -Wall -g2012 -o PairTripleDetector_test PairTripleDetector_test.v
-#          ./PairTripleDetector_test
-
+          iverilog -Wall -g2012 -o PairTripleDetector_test PairTripleDetector_test.v
+          ./PairTripleDetector_test
