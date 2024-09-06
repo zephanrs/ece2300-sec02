@@ -20,7 +20,7 @@ module PairTripleDetector
   // or (out,   y,   x);
 
   // Boolean Equations
-  assign y = ((in0 & in1) & in2) | (in0 & in1)
+  assign y = ((in0 & in1) & in2) | (in0 & in1);
 
 endmodule
 
