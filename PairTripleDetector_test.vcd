@@ -1,0 +1,180 @@
+$date
+	Fri Sep  6 14:52:34 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module Top $end
+$var wire 1 ! reset $end
+$var wire 1 " dut_out $end
+$var wire 1 # clk $end
+$var reg 1 $ dut_in0 $end
+$var reg 1 % dut_in1 $end
+$var reg 1 & dut_in2 $end
+$scope module dut $end
+$var wire 1 $ in0 $end
+$var wire 1 % in1 $end
+$var wire 1 & in2 $end
+$var wire 1 " out $end
+$var wire 1 ' w $end
+$var wire 1 ( x $end
+$var wire 1 ) y $end
+$upscope $end
+$scope module t $end
+$var reg 1 # clk $end
+$var reg 1 ! reset $end
+$var integer 32 * cycles [31:0] $end
+$var integer 32 + n [31:0] $end
+$var integer 32 , num_errors [31:0] $end
+$var integer 32 - seed [31:0] $end
+$scope task reset_sequence $end
+$upscope $end
+$upscope $end
+$scope task check $end
+$var reg 1 . in0 $end
+$var reg 1 / in1 $end
+$var reg 1 0 in2 $end
+$var reg 1 1 out $end
+$upscope $end
+$scope task test_case_1_basic $end
+$upscope $end
+$scope task test_case_2_exhaustive $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x1
+x0
+x/
+x.
+b11011110101011011011111011101111 -
+b0 ,
+b10 +
+b0 *
+x)
+x(
+x'
+x&
+x%
+x$
+1#
+x"
+x!
+$end
+#1
+1!
+#5
+0#
+#10
+1#
+#15
+0#
+#20
+1#
+#25
+0#
+#30
+1#
+#31
+0"
+0)
+0'
+0(
+0&
+0%
+0$
+01
+00
+0/
+0.
+0!
+#35
+0#
+#40
+b1 *
+1#
+#41
+1&
+10
+#45
+0#
+#50
+b10 *
+1#
+#51
+1'
+0&
+1%
+00
+1/
+#55
+0#
+#60
+b11 *
+1#
+#61
+1"
+1)
+1&
+11
+10
+#65
+0#
+#70
+b100 *
+1#
+#71
+0"
+0)
+0&
+0%
+1$
+01
+00
+0/
+1.
+#75
+0#
+#80
+b101 *
+1#
+#81
+1"
+1)
+1&
+11
+10
+#85
+0#
+#90
+b110 *
+1#
+#91
+0)
+1(
+0&
+1%
+00
+1/
+#95
+0#
+#100
+b111 *
+1#
+#101
+1)
+1&
+10
+#105
+0#
+#110
+b1000 *
+1#
+#111
