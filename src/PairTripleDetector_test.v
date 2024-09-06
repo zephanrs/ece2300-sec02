@@ -78,7 +78,6 @@ module Top();
 
   endtask
 
-
   //----------------------------------------------------------------------
   // test_case_2_exhaustive
   //----------------------------------------------------------------------
@@ -111,7 +110,7 @@ module Top();
     if ((t.n <= 0) || (t.n == 1)) test_case_1_basic();
     if ((t.n <= 0) || (t.n == 2)) test_case_2_exhaustive();
 
-    $write("\n");
+    $write(t.pass_fail);
     $finish;
   end
 

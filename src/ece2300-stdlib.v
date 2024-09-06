@@ -15,6 +15,11 @@ module ece2300_TestUtils
   initial clk = 1'b1;
   always #5 clk = ~clk;
 
+  // Error count
+
+  string pass_fail = "\n*** PASSED ***\n\n";
+  int num_errors = 0;
+
   // This variable holds the +test-case command line argument indicating
   // which test cases to run.
 
@@ -49,6 +54,8 @@ module ece2300_TestUtils
       cycles <= cycles + 1;
 
     if ( cycles > 10000 ) begin
+      pass_fail = "\n*** FAILED ***\n\n";
+      num_errors = num_errors + 1;
       $display( "  ERROR (cycles=%0d): timeout!\n", cycles );
       $finish;
     end
@@ -75,9 +82,12 @@ endmodule
 // an X in __dut will only match an X in __ref.
 
 `define ECE2300_CHECK_EQ( __dut, __ref )                                \
-  if ( __ref !== ( __ref ^ __dut ^ __ref ) )                            \
+  if ( __ref !== ( __ref ^ __dut ^ __ref ) ) begin                      \
+    t.pass_fail = "\n*** FAILED ***\n\n";                               \
+    t.num_errors = t.num_errors + 1;                                    \
     $display( "  ERROR (cycle=%0d): %s != %s (%x != %x)",               \
               t.cycles, "__dut", "__ref", __dut, __ref );               \
+  end                                                                   \
   if (1)
 
 `endif /* ECE2300_STDLIB */

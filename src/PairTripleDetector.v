@@ -14,13 +14,18 @@ module PairTripleDetector
   wire x;
   wire y;
 
-  wire z;
-
   or ( w,   in0, in1 );
   and( x,   in0, in1 );
   and( y,   w,   in2 );
-  or ( z,   y,   x   );
-  not( out, z        );
+  or ( out, y,   x   );
+
+  // wire z;
+  //
+  // or ( w,   in0, in1 );
+  // and( x,   in0, in1 );
+  // and( y,   w,   in2 );
+  // or ( z,   y,   x   );
+  // not( out, z        );
 
 endmodule
 
