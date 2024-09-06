@@ -10,10 +10,6 @@ module PairTripleDetector
   output wire out
 );
 
-  // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Discussion Section Task
-  // '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-  // Implement a pair/triple detector using explicit gate-level modeling.
   wire w;
   wire y;
   wire x;
