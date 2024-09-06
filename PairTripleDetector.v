@@ -10,13 +10,17 @@ module PairTripleDetector
   output wire out
 );
 
-  wire w;
-  wire y;
-  wire x;
-  or (  w, in0, in1);
-  and(  x, in0, in1);
-  and(  y,   w, in2);
-  or (out,   y,   x);
+  // Explicit Gate-Level Modeling
+  // wire w;
+  // wire y;
+  // wire x;
+  // or (  w, in0, in1);
+  // and(  x, in0, in1);
+  // and(  y,   w, in2);
+  // or (out,   y,   x);
+
+  // Boolean Equations
+  assign y = ((in0 & in1) & in2) | (in0 & in1)
 
 endmodule
 
