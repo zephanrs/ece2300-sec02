@@ -45,5 +45,5 @@ jobs:
           iverilog -Wall -g2012 -o PairTripleDetector_test \
             PairTripleDetector_test.v \
             PairTripleDetector.v
-          ./PairTripleDetector_test +verbose=-1
-          grep "*** PASSED ***
+          ./PairTripleDetector_test +verbose=-1 > PairTripleDetector_test.log
+          grep "*** PASSED ***" PairTripleDetector_test.log
