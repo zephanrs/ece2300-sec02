@@ -17,7 +17,7 @@ module ece2300_TestUtils
 
   // Error count
 
-  string pass_fail = "\n*** PASSED ***\n\n";
+  string pass_fail = "\n*** PASSED ***\n";
   int num_errors = 0;
 
   // This variable holds the +test-case command line argument indicating
@@ -54,7 +54,7 @@ module ece2300_TestUtils
       cycles <= cycles + 1;
 
     if ( cycles > 10000 ) begin
-      pass_fail = "\n*** FAILED ***\n\n";
+      pass_fail = "\n*** FAILED ***\n";
       num_errors = num_errors + 1;
       $display( "  ERROR (cycles=%0d): timeout!\n", cycles );
       $finish;
@@ -83,7 +83,7 @@ endmodule
 
 `define ECE2300_CHECK_EQ( __dut, __ref )                                \
   if ( __ref !== ( __ref ^ __dut ^ __ref ) ) begin                      \
-    t.pass_fail = "\n*** FAILED ***\n\n";                               \
+    t.pass_fail = "\n*** FAILED ***\n";                                 \
     t.num_errors = t.num_errors + 1;                                    \
     $display( "  ERROR (cycle=%0d): %s != %s (%x != %x)",               \
               t.cycles, "__dut", "__ref", __dut, __ref );               \
